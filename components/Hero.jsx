@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import ConnectWalletButton from '/components/Utils/button.js'
 import {
   Box,
   Heading,
@@ -12,8 +13,8 @@ import {
 
 import { useRouter } from 'next/router'
 
-import logoBg from '../assets/bg1.jpg';
-import poweredBy from '../assets/poweredby.png'
+import logoBg from '../assets/background.png';
+import hydraxlogo from '../assets/hydraxlogo.png';
 
 export default function Hero() {
 
@@ -49,17 +50,15 @@ export default function Hero() {
           textAlign={'center'}
           spacing={{ base: 8, md: 14 }}
           py={{ base: 20, md: 36 }}>
-
+          <Center><Image src={hydraxlogo.src} mb='-5' maxW={'10%'}/></Center>
           <Heading
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'} color='white'>
-            Welcome to NFT Minty!
+            HydraX Launchpad
           </Heading>
           <Text color={'white'}>
-          Create and deploy your NFT collection on Polygon Mumbai Testnet and let your community to mint directly on our platform!
-          <br/>Everything can be done only with few clicks without hiring a developer.
-           <br/>
+          Join our launchpad as we reinvent capital markets in the Web3 Space
         </Text>
           <Stack
             direction={'column'}
@@ -67,25 +66,11 @@ export default function Hero() {
             align={'center'}
             alignSelf={'center'}
             position={'relative'}>
-          <Button
-              variant={'solid'}
-              size='lg'
-              bgGradient='linear(to-l, #7928CA, #FF0080)'
-              color='white'
-              maxW={'100%'}
-              fontSize={['12px', null, null, null, '100%']}
-              _hover={{bgGradient: "linear(to-l, #8a32e3, #FF0080)", color: "white"}}
-              px={6} borderRadius={40}>
-              <Link href='/CreateNft'>
-             Get Started!
-              </Link>
-            </Button>
+            <ConnectWalletButton></ConnectWalletButton>
             <Box>
             </Box>
           </Stack>
         </Stack>
-        <Center>
-        <Image src={poweredBy.src} alt={poweredBy.src} mb='4' maxW={'100%'}/></Center>
         </Container>
       </Flex>
     </>

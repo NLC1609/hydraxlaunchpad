@@ -353,16 +353,16 @@ const isRevealedCollection = () => {
 
   return (
    <><Container py={20}>
-   <Text fontSize='3xl' ><b>Create Your NFT Collection</b></Text>
+   <Text fontSize='3xl' ><b>Create Your Tokens</b></Text>
    <Text mb={5}>
           Fast and Easy with full access to your smart contract using our integrated
           admin dashboard!
         </Text>
-           <Text><b>Collection Name</b></Text>
-           <Input placeholder='My NFTs' mt='10px' onChange={nameChangeHandler} />
+           <Text><b>Token Name</b></Text>
+           <Input placeholder='My Token' mt='10px' onChange={nameChangeHandler} />
 
            <br />
-           <Text mt='30px'><b>Collection Symbol</b></Text>
+           <Text mt='30px'><b>Token Symbol</b></Text>
            <Input placeholder='$MNFT' mt='10px' onChange={symbolChangeHandler} />
 
            <br />
@@ -395,7 +395,7 @@ const isRevealedCollection = () => {
            <Input placeholder='3' mt='10px' onChange={maxPerWalletChangeHandler} /> */}
 
            <br />
-           <Text mt='30px'><b>Mint Price [MATIC]</b></Text>
+           <Text mt='30px'><b>STO Price [ETH]</b></Text>
            <Input placeholder='100' mt='10px' onChange={priceChangeHandler} />
 
             <br />
